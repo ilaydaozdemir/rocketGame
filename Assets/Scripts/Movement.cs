@@ -49,6 +49,8 @@ public class Movement : MonoBehaviour
 
     private void ApplyRotation(float rotationFrame)
     {
+        rb.freezeRotation=true;
         transform.Rotate(Vector3.forward * rotationFrame * Time.fixedDeltaTime);
+        rb.freezeRotation=false;
     }
 }
